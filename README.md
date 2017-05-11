@@ -11,4 +11,5 @@
 ## Spring Boot系列之Log4j2的配置及使用
 
 教程地址：[https://dkylin.com/archives/2017/spring-boot-log4j2-config.html](https://dkylin.com/archives/2017/spring-boot-log4j2-config.html)
+
 示例代码地址：[https://github.com/dkylin/SpringBoot-Sample/tree/master/SpringBoot-log4j2](https://github.com/dkylin/SpringBoot-Sample/tree/master/SpringBoot-log4j2)
