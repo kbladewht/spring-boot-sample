@@ -8,5 +8,5 @@
 
 我的邮箱：gekylin@gmail.com
 
-## Spring Boot系列之Log4j2的配置及使用
+## [Spring Boot系列之Log4j2的配置及使用](https://github.com/dkylin/SpringBoot-Sample/tree/master/SpringBoot-log4j2)
 
