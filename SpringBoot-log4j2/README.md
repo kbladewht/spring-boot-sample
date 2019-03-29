@@ -10,7 +10,7 @@ Spring Boot 可以集成很多不同的日志系统，其中最常用的Apache L
 
 ```gradle
 dependencies {
-    // log4j2 
+    // log4j2
     compile "org.apache.logging.log4j:log4j-api:2.8"
     compile "org.apache.logging.log4j:log4j-core:2.8"
     // 用来支持Logger中的Async
@@ -128,7 +128,7 @@ import org.apache.logging.log4j.Logger;
 
 /**
  * Logger 日志记录辅助类
- * 
+ *
  * Created by Kylin on 2017/5/11.
  */
 public class L {
@@ -214,5 +214,4 @@ public class WebController {
 
 Log4j2的Github地址：[https://github.com/apache/logging-log4j2](https://github.com/apache/logging-log4j2)
 
-本教程的示例代码地址：[https://github.com/dkylin/SpringBoot-Sample/tree/master/SpringBoot-log4j2](https://github.com/dkylin/SpringBoot-Sample/tree/master/SpringBoot-log4j2)
-
+本教程的示例代码地址：[https://github.com/JemGeek/SpringBoot-Sample/tree/master/SpringBoot-log4j2](https://github.com/JemGeek/SpringBoot-Sample/tree/master/SpringBoot-log4j2)
