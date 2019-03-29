@@ -57,6 +57,11 @@ public class FileService {
         }
     }
 
+    /**
+     * 加载文件
+     * @param fileName 文件名
+     * @return 文件
+     */
     public Resource loadFileAsResource(String fileName) {
         try {
             Path filePath = this.fileStorageLocation.resolve(fileName).normalize();
