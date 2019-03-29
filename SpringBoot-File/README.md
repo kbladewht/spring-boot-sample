@@ -18,12 +18,12 @@
     
 开发环境为 Intellij IDEA，项目创建很简单，按照下面的步骤创建即可：
     
-    1. File -> New -> Project...
-    2. 选择 **Spring Initializr**，点击 Next
-    3. 填写 Group (项目域名) 和 Artifact (项目别名)
-    4. 构建类型可以选择 Maven 或 Gradle， 看个人习惯
-    5. 添加 **Web** 依赖
-    6. 输入项目名称及保存路径，完成创建
+1. File -> New -> Project...
+2. 选择 **Spring Initializr**，点击 Next
+3. 填写 Group (项目域名) 和 Artifact (项目别名)
+4. 构建类型可以选择 Maven 或 Gradle， 看个人习惯
+5. 添加 **Web** 依赖
+6. 输入项目名称及保存路径，完成创建
     
 项目创建完毕之后就可以进行开发，项目的完整结构如下图所示：
 
