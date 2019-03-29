@@ -3,7 +3,7 @@ package com.james.sample.file.property;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties(prefix = "file")
-public class FileStorageProperties {
+public class FileProperties {
     private String uploadDir;
 
     public String getUploadDir() {

@@ -1,13 +1,13 @@
 package com.james.sample.file;
 
-import com.james.sample.file.property.FileStorageProperties;
+import com.james.sample.file.property.FileProperties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 @SpringBootApplication
 @EnableConfigurationProperties({
-        FileStorageProperties.class
+        FileProperties.class
 })
 public class SpringBootFileApplication {
 

@@ -1,7 +1,7 @@
 package com.james.sample.file.service;
 
 import com.james.sample.file.exception.FileException;
-import com.james.sample.file.property.FileStorageProperties;
+import com.james.sample.file.property.FileProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
@@ -22,8 +22,8 @@ public class FileService {
     private final Path fileStorageLocation;
 
     @Autowired
-    public FileService(FileStorageProperties fileStorageProperties) {
-        this.fileStorageLocation = Paths.get(fileStorageProperties.getUploadDir()).toAbsolutePath().normalize();
+    public FileService(FileProperties fileProperties) {
+        this.fileStorageLocation = Paths.get(fileProperties.getUploadDir()).toAbsolutePath().normalize();
         try {
             Files.createDirectories(this.fileStorageLocation);
         } catch (Exception ex) {
