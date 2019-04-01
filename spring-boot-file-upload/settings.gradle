@@ -3,4 +3,4 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
-rootProject.name = 'SpringBoot-File'
+rootProject.name = 'spring-boot-file-upload'
