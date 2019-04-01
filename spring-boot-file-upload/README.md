@@ -592,6 +592,12 @@ multipleUploadForm.addEventListener('submit', function(event){
 
 至此，文件的上传及下载功能已完成。在正式环境中可能还需要将上传的文件存储到数据库，此处按照实际需求去处理即可。
 
-本文源代码地址：[https://github.com/JemGeek/SpringBoot-Sample/tree/master/SpringBoot-File](https://github.com/JemGeek/SpringBoot-Sample/tree/master/SpringBoot-File)
+本文源代码地址：[https://github.com/JemGeek/spring-boot-sample/tree/master/spring-boot-file-upload](https://github.com/JemGeek/spring-boot-sample/tree/master/spring-boot-file-upload)
 
 本文参考(需要翻墙)：[https://www.callicoder.com/spring-boot-file-upload-download-rest-api-example/](https://www.callicoder.com/spring-boot-file-upload-download-rest-api-example/)
+
+更多技术文章请关注我的博客主页：[http://JemGeek.com](http://JemGeek.com)
+
+或者订阅我的微信公众号【Techno Geek】
+
+![wechat_qrcode.jpg](https://i.loli.net/2019/04/01/5ca2246b9d918.jpg)
