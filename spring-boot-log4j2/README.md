@@ -160,6 +160,9 @@ public class L {
     public static void e(String msg) {
         LOGGER.error(msg);
     }
+    public static void f(String msg) {
+        LOGGER.fatal(msg);
+    }
 }
 ```
 
@@ -176,6 +179,7 @@ public class WebController {
         L.i(msg);
         L.w(msg);
         L.e(msg);
+        L.f(msg);
         return "index";
     }
 }
