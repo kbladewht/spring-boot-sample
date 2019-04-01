@@ -2,22 +2,21 @@
 
 后台程序开发及上线时，一般都会用到Log信息打印及Log日志记录，开发时通过Log信息打印可以快速的定位问题所在，帮助我们快捷开发。程序上线后如遇到Bug或错误，此时则需要日志记录来查找发现问题所在。
 
-Spring Boot 可以集成很多不同的日志系统，其中最常用的Apache Log4j，而Log4j 2是Log4j的升级版本，Log4j 2相对于Log4j 1.x 有了很多显著的改善。所以这篇博客就直接来说说Spring Boot如何集成并配置使用Log4j2.
+Spring Boot 可以集成很多不同的日志系统，其中最常用的Apache Log4j，而Log4j 2是Log4j的升级版本，Log4j 2相对于Log4j 1.x 有了很多显著的改善。所以这篇博客就直接来说说Spring Boot如何集成并配置使用Log4j2。
 
 ## 1. 导入Log4j2的包
 
 如果你使用Gradle，则在`build.gradle`文件中添加以下依赖。示例代码中使用的是Gradle方式。
 
-```gradle
+```
 dependencies {
     // log4j2
-    compile "org.apache.logging.log4j:log4j-api:2.8"
-    compile "org.apache.logging.log4j:log4j-core:2.8"
+    implementation "org.apache.logging.log4j:log4j-api:2.8"
+    implementation "org.apache.logging.log4j:log4j-core:2.8"
     // 用来支持Logger中的Async
-    compile 'com.lmax:disruptor:3.3.6'
+    implementation 'com.lmax:disruptor:3.3.6'
 }
 ```
-
 
 如果你使用Maven，则在`pom.xml`文件中添加以下依赖。
 
@@ -43,7 +42,7 @@ dependencies {
 </dependencies>
 ```
 
-## 2. 添加log4j2配置文件
+## 2. 添加 log4j2 配置文件
 
 在项目的resources资源文件根目录下创建`log4j2.xml`文件并复制以下代码到文件中。
 
@@ -55,8 +54,8 @@ dependencies {
 <Configuration status="OFF">
     <!-- 日志文件目录和压缩文件目录配置 -->
     <Properties>
-        <Property name="fileName">/home/kylin/log/knight/spring_log</Property>
-        <Property name="fileGz">/home/kylin/log/knight/spring_log/7z</Property>
+        <Property name="fileName">/home/James/log/spring_log</Property>
+        <Property name="fileGz">/home/James/log/spring_log/7z</Property>
     </Properties>
 
     <Appenders>
@@ -121,15 +120,13 @@ dependencies {
 在utils包中创建`L.java`类文件。
 
 ```java
-package com.spring.log4j2.utils;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
  * Logger 日志记录辅助类
  *
- * Created by Kylin on 2017/5/11.
+ * Created by James on 2017/5/11.
  */
 public class L {
 
@@ -174,8 +171,8 @@ public class WebController {
     @RequestMapping("/")
     public String index(){
         String msg = "Spring Boot系列之Log4j2的配置及使用";
-        L.t(msg);
-        L.d(msg);
+        L.t(msg); // Log4j2.xml中配置的level="info",所以此条信息并不会打印在控制台
+        L.d(msg); // 同上，级别：TRACE < DEBUG < INFO < WARN < ERROR < FATAL
         L.i(msg);
         L.w(msg);
         L.e(msg);
@@ -198,15 +195,15 @@ public class WebController {
 
 同时在电脑系统中生成了Log文件，如下图所示：
 
-![log file](https://ooo.0o0.ooo/2017/05/11/59141ce1be407.png)
+![Log File](https://i.loli.net/2019/04/01/5ca223a39fdc0.png)
 
 观察路径可以发现，这个路径正是在`Log4j2.xml`中设置的路径：
 
 ```xml
     <!-- 日志文件目录和压缩文件目录配置 -->
     <Properties>
-        <Property name="fileName">/home/kylin/log/knight/spring_log</Property>
-        <Property name="fileGz">/home/kylin/log/knight/spring_log/7z</Property>
+        <Property name="fileName">/home/James/log/spring_log</Property>
+        <Property name="fileGz">/home/James/log/spring_log/7z</Property>
     </Properties>
 ```
 
@@ -214,4 +211,10 @@ public class WebController {
 
 Log4j2的Github地址：[https://github.com/apache/logging-log4j2](https://github.com/apache/logging-log4j2)
 
-本教程的示例代码地址：[https://github.com/JemGeek/SpringBoot-Sample/tree/master/SpringBoot-log4j2](https://github.com/JemGeek/SpringBoot-Sample/tree/master/SpringBoot-log4j2)
+本教程的示例代码地址：[https://github.com/JemGeek/spring-boot-sample/tree/master/spring-boot-log4j2](https://github.com/JemGeek/spring-boot-sample/tree/master/spring-boot-log4j2)
+
+更多技术文章请关注我的博客主页：[http://jemgeek.com](http://jemgeek.com)
+
+或者订阅我的微信公众号【Techno Geek】：
+
+![wechat_qrcode.jpg](https://i.loli.net/2019/04/01/5ca2246b9d918.jpg)

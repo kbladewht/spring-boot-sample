@@ -1,4 +1,4 @@
-package com.spring.log4j2.utils;
+package com.james.sample.log4j2.utils;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -8,7 +8,7 @@ import org.apache.logging.log4j.Logger;
  *
  * 级别：TRACE < DEBUG < INFO < WARN < ERROR < FATAL
  *
- * Created by Kylin on 2017/5/11.
+ * Created by James on 2017/5/11.
  */
 public class L {
 
@@ -41,5 +41,9 @@ public class L {
 
     public static void e(String msg) {
         LOGGER.error(msg);
+    }
+
+    public static void f(String msg) {
+        LOGGER.fatal(msg);
     }
 }

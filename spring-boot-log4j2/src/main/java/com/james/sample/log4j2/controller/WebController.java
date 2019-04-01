@@ -1,13 +1,14 @@
-package com.spring.log4j2.controller;
+package com.james.sample.log4j2.controller;
 
-import com.spring.log4j2.utils.L;
+
+import com.james.sample.log4j2.utils.L;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * Web资源控制器
+ * Web 资源控制器
  *
- * Created by Kylin on 2017/5/11.
+ * Created by James on 2017/5/11.
  */
 @Controller
 public class WebController {
@@ -20,6 +21,7 @@ public class WebController {
         L.i(msg);
         L.w(msg);
         L.e(msg);
+        L.f(msg);
         return "index";
     }
 }
