@@ -213,8 +213,8 @@ Log4j2的Github地址：[https://github.com/apache/logging-log4j2](https://githu
 
 本教程的示例代码地址：[https://github.com/JemGeek/spring-boot-sample/tree/master/spring-boot-log4j2](https://github.com/JemGeek/spring-boot-sample/tree/master/spring-boot-log4j2)
 
-更多技术文章请关注我的博客主页：[http://jemgeek.com](http://jemgeek.com)
+更多技术文章请关注我的博客主页：[http://JemGeek.com](http://JemGeek.com)
 
-或者订阅我的微信公众号【Techno Geek】：
+或者订阅我的微信公众号【Techno Geek】
 
 ![wechat_qrcode.jpg](https://i.loli.net/2019/04/01/5ca2246b9d918.jpg)
