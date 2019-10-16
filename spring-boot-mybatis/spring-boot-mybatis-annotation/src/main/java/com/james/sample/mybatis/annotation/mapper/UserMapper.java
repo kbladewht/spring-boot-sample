@@ -17,15 +17,15 @@ public interface UserMapper {
     void update(User user);
 
     @Select("SELECT * FROM user WHERE username = #{username}")
-    @ResultMap(value = "com.james.sample.mybatis.annotation.mapper.UserMapper.UserResultMap")
+    @ResultMap("com.james.sample.mybatis.annotation.mapper.UserMapper.UserResultMap")
     User getUserByUsername(String username);
 
     @Select("SELECT * FROM user WHERE user_id = #{userId}")
-    @ResultMap(value = "com.james.sample.mybatis.annotation.mapper.UserMapper.UserResultMap")
+    @ResultMap("com.james.sample.mybatis.annotation.mapper.UserMapper.UserResultMap")
     User getUserByUserId(int userId);
 
     @Select("SELECT * FROM user")
-    @ResultMap(value = "com.james.sample.mybatis.annotation.mapper.UserMapper.UserResultMap")
+    @ResultMap("com.james.sample.mybatis.annotation.mapper.UserMapper.UserResultMap")
     List<User> getAllUser();
 
     /**
