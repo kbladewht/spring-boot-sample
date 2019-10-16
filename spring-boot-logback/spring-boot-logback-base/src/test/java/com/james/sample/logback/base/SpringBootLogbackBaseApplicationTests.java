@@ -11,6 +11,7 @@ public class SpringBootLogbackBaseApplicationTests {
 
     @Test
     public void contextLoads() {
+
     }
 
 }
