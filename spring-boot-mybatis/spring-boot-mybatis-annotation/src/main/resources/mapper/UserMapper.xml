@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
 <mapper namespace="com.james.sample.mybatis.annotation.mapper.UserMapper">
-    <resultMap id="userResultMap" type="com.james.sample.mybatis.annotation.entity.User">
-        <id column="user_id" property="userId" jdbcType="INTEGER"/>
-        <result column="username" property="username" jdbcType="VARCHAR"/>
-        <result column="password" property="password" jdbcType="VARCHAR"/>
-        <result column="email" property="email" jdbcType="VARCHAR"/>
-        <result column="avatar" property="avatar" jdbcType="VARCHAR"/>
-        <result column="sex" property="sex" jdbcType="TINYINT"/>
-        <result column="activated" property="activated" jdbcType="TINYINT"/>
-        <result column="create_time" property="createTime" jdbcType="BIGINT"/>
-        <result column="update_time" property="updateTime" javaType="BIGINT"/>
+    <resultMap id="UserResultMap" type="User">
+        <id column="user_id" property="userId"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
     </resultMap>
 </mapper>
